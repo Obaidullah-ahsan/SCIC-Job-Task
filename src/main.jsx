@@ -6,6 +6,7 @@ import Products from "./Pages/Products/Products";
 import Root from "./Layouts/Root";
 import Register from "./Pages/Register/Register";
 import Login from "./Pages/Login/Login";
+import AuthProvider from "./Provider/AuthProvider";
 
 const router = createBrowserRouter([
   {
@@ -14,22 +15,24 @@ const router = createBrowserRouter([
     children: [
       {
         path: "/",
-        element: <Products></Products>
+        element: <Products></Products>,
       },
       {
         path: "/register",
-        element: <Register></Register>
+        element: <Register></Register>,
       },
       {
         path: "/login",
-        element: <Login></Login>
+        element: <Login></Login>,
       },
-    ]
+    ],
   },
 ]);
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
-    <RouterProvider router={router} />
+    <AuthProvider>
+      <RouterProvider router={router} />
+    </AuthProvider>
   </StrictMode>
 );

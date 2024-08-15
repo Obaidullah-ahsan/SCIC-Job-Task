@@ -1,14 +1,55 @@
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import SocialLogin from "../../Components/SocialLogin";
+import { useContext } from "react";
+import { AuthContext } from "../../Provider/AuthProvider";
+import Swal from "sweetalert2";
 
 const Register = () => {
+  const { createUser, updateUser } = useContext(AuthContext);
+  const navigate = useNavigate();
+  const handleRegister = (e) => {
+    e.preventDefault();
+    const form = e.target;
+    const name = form.name.value;
+    const photo = form.photo.value;
+    const email = form.email.value;
+    const password = form.password.value;
+    createUser(email, password)
+      .then((result) => {
+        updateUser(name, photo)
+          .then(() => {
+            Swal.fire({
+              title: "Success!",
+              text: "User Register Successfully",
+              icon: "success",
+              confirmButtonText: "Ok",
+            });
+            form.reset();
+            // when user Successfully register user navigate homepage
+            navigate("/");
+          })
+          .catch((error) => {
+            console.log(error.message);
+          });
+        console.log(result.user);
+      })
+      .catch((error) => {
+        console.log(error.message);
+        Swal.fire({
+          title: "Error!",
+          text: error.code.slice(5, 50),
+          icon: "error",
+          confirmButtonText: "Try again",
+        });
+      });
+  };
   return (
     <div className="flex justify-center">
       <div className="w-full px-6 py-8 md:px-8 lg:w-2/5">
         <h2 className="text-center mx-auto text-2xl font-bold">
           Register Now!
         </h2>
-        <form>
+        <form onSubmit={handleRegister}>
           <div className="mt-4">
             <label className="block mb-2 text-sm font-medium text-gray-600 dark:text-gray-200">
               Name
