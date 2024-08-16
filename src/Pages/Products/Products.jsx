@@ -10,10 +10,10 @@ const Products = () => {
   const [searchText, setSearchText] = useState("");
 
   useEffect(() => {
-    axios.get("http://localhost:3000/products").then((res) => {
+    axios.get(`http://localhost:3000/products?search=${search}`).then((res) => {
       setProducts(res.data);
     });
-  }, []);
+  }, [search]);
   console.log(products);
 
   const options = [
@@ -27,7 +27,7 @@ const Products = () => {
     setSearch(searchText);
   };
   return (
-    <div className="mx-4">
+    <div className="mx-4 mb-6">
       <div className="flex justify-evenly mt-10">
         <div className="max-w-80 flex-1">
           <select
@@ -52,8 +52,8 @@ const Products = () => {
               type="text"
               onChange={(e) => setSearchText(e.target.value)}
               value={searchText}
-              name="assignmentSearch"
-              placeholder="Enter Assignments Title"
+              name="productSearch"
+              placeholder="Enter Product Title"
             />
 
             <button className="px-1 md:px-4 py-1 text-sm font-medium tracking-wider text-gray-100 uppercase transition-colors duration-300 transform bg-gray-700 rounded-md hover:bg-gray-600 focus:bg-gray-600 focus:outline-none">

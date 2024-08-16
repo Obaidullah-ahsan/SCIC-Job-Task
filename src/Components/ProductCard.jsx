@@ -2,7 +2,7 @@ const ProductCard = ({ product }) => {
   const { Product_Name, Product_Image, Description, Price, Ratings , Category} = product;
   return (
     <div>
-      <div className="max-w-[350px] border overflow-hidden bg-base-200 dark:bg-gray-800">
+      <div className="border overflow-hidden bg-base-200 dark:bg-gray-800">
         <img
           className="object-cover w-full h-44"
           src={Product_Image}
