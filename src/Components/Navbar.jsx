@@ -8,10 +8,10 @@ const Navbar = () => {
     logout();
   };
   return (
-    <header className="p-3 bg-gray-100 dark:text-gray-800">
+    <header className="p-3 bg-slate-200 dark:text-gray-800">
       <div className="container flex justify-between mx-auto">
         <Link to="/">
-          <h2 className="text-2xl font-bold">Logo</h2>
+          <h2 className="text-2xl font-bold pl-4">UrbanCart</h2>
         </Link>
         {user ? (
           <div className="flex gap-2">
