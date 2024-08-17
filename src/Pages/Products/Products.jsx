@@ -18,7 +18,7 @@ const Products = () => {
 
   useEffect(() => {
     axios
-      .get(`http://localhost:3000/products`, {
+      .get(`https://scic-job-task-server-two.vercel.app/products`, {
         params: {
           page,
           limit: 10, // Number of products per page
