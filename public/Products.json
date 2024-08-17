@@ -5,6 +5,7 @@
     "Description": "55-inch 4K Ultra HD Smart TV with HDR and Alexa Compatibility.",
     "Price": 499.99,
     "Category": "Electronics",
+    "Brand": "Walton",
     "Ratings": 4.5,
     "Product_Creation_Date": "2024-08-15T10:24:00"
   },
@@ -14,6 +15,7 @@
     "Description": "Over-ear headphones with active noise cancellation and 30 hours battery life.",
     "Price": 299.99,
     "Category": "Electronics",
+    "Brand": "Walton",
     "Ratings": 4.7,
     "Product_Creation_Date": "2024-08-15T11:30:00"
   },
@@ -22,7 +24,8 @@
     "Product_Image": "https://i.ibb.co/T1tnpTj/Ultra-HD-Smart-TV.jpg",
     "Description": "High-performance gaming laptop with RTX 3070 and 16GB RAM.",
     "Price": 1499.99,
-    "Category": "Computers",
+    "Category": "Electronics",
+    "Brand": "Hp",
     "Ratings": 4.8,
     "Product_Creation_Date": "2024-08-15T12:45:00"
   },
@@ -31,7 +34,8 @@
     "Product_Image": "https://i.ibb.co/9YwscMX/Smartphone.jpg",
     "Description": "Latest smartphone with 128GB storage and 5G connectivity.",
     "Price": 799.99,
-    "Category": "Mobile Phones",
+    "Category": "Electronics",
+    "Brand": "Samsung",
     "Ratings": 4.6,
     "Product_Creation_Date": "2024-08-15T13:15:00"
   },
@@ -41,6 +45,7 @@
     "Description": "Portable Bluetooth speaker with 20 hours playtime and waterproof design.",
     "Price": 99.99,
     "Category": "Electronics",
+    "Brand": "Samsung",
     "Ratings": 4.4,
     "Product_Creation_Date": "2024-08-15T14:00:00"
   },
@@ -49,7 +54,8 @@
     "Product_Image": "https://i.ibb.co/NSKz9vr/Smartwatch.jpg",
     "Description": "Smartwatch with heart rate monitor, GPS, and swim-proof design.",
     "Price": 249.99,
-    "Category": "Wearables",
+    "Category": "Accessories",
+    "Brand": "Walton",
     "Ratings": 4.3,
     "Product_Creation_Date": "2024-08-15T15:20:00"
   },
@@ -59,6 +65,7 @@
     "Description": "Action camera with 4K video recording and waterproof housing.",
     "Price": 199.99,
     "Category": "Cameras",
+    "Brand": "Samsung",
     "Ratings": 4.5,
     "Product_Creation_Date": "2024-08-15T16:10:00"
   },
@@ -67,7 +74,8 @@
     "Product_Image": "https://i.ibb.co/NSKz9vr/Smartwatch.jpg",
     "Description": "Fitness tracker with step counting, sleep monitoring, and heart rate tracking.",
     "Price": 69.99,
-    "Category": "Wearables",
+    "Category": "Accessories",
+    "Brand": "Hp",
     "Ratings": 4.2,
     "Product_Creation_Date": "2024-08-15T17:00:00"
   },
@@ -76,7 +84,8 @@
     "Product_Image": "https://i.ibb.co/9gmP47h/Portable-SSD.jpg",
     "Description": "1TB Portable SSD with USB 3.2 Gen 2 and read speeds up to 1050MB/s.",
     "Price": 149.99,
-    "Category": "Storage",
+    "Category": "Accessories",
+    "Brand": "Hp",
     "Ratings": 4.7,
     "Product_Creation_Date": "2024-08-15T18:30:00"
   },
@@ -86,6 +95,7 @@
     "Description": "Fast wireless charger with 15W output and compact design.",
     "Price": 29.99,
     "Category": "Accessories",
+    "Brand": "Walton",
     "Ratings": 4.6,
     "Product_Creation_Date": "2024-08-15T19:00:00"
   },
@@ -94,7 +104,8 @@
     "Product_Image": "https://i.ibb.co/YTLVSJN/Electric-Scooter.jpg",
     "Description": "Electric scooter with a top speed of 18 mph and a range of 20 miles.",
     "Price": 499.99,
-    "Category": "Transportation",
+    "Category": "Accessories",
+    "Brand": "Samsung",
     "Ratings": 4.4,
     "Product_Creation_Date": "2024-08-15T20:15:00"
   },
@@ -103,7 +114,8 @@
     "Product_Image": "https://i.ibb.co/9gmP47h/Portable-SSD.jpg",
     "Description": "Smart home hub for controlling all your smart devices with voice commands.",
     "Price": 129.99,
-    "Category": "Home Automation",
+    "Category": "Accessories",
+    "Brand": "Walton",
     "Ratings": 4.3,
     "Product_Creation_Date": "2024-08-15T21:05:00"
   },
@@ -112,7 +124,8 @@
     "Product_Image": "https://i.ibb.co/NrmVmfv/Robot-Vacuum-Cleaner.jpg",
     "Description": "Automatic robot vacuum cleaner with smart navigation and powerful suction.",
     "Price": 349.99,
-    "Category": "Home Appliances",
+    "Category": "Accessories",
+    "Brand": "Walton",
     "Ratings": 4.6,
     "Product_Creation_Date": "2024-08-15T22:00:00"
   },
@@ -121,7 +134,8 @@
     "Product_Image": "https://i.ibb.co/9gmP47h/Portable-SSD.jpg",
     "Description": "7-in-1 Instant Pot with pressure cooker, slow cooker, and steamer functions.",
     "Price": 99.99,
-    "Category": "Kitchen Appliances",
+    "Category": "Home Appliances",
+    "Brand": "Samsung",
     "Ratings": 4.7,
     "Product_Creation_Date": "2024-08-15T23:30:00"
   },
@@ -130,7 +144,8 @@
     "Product_Image": "https://i.ibb.co/N79sJ2J/Air-Purifier.jpg",
     "Description": "5-quart air fryer with rapid air technology for healthy frying.",
     "Price": 89.99,
-    "Category": "Kitchen Appliances",
+    "Category": "Home Appliances",
+    "Brand": "Hp",
     "Ratings": 4.5,
     "Product_Creation_Date": "2024-08-16T00:10:00"
   },
@@ -140,6 +155,7 @@
     "Description": "Ergonomic office chair with lumbar support and adjustable height.",
     "Price": 229.99,
     "Category": "Furniture",
+    "Brand": "Hp",
     "Ratings": 4.4,
     "Product_Creation_Date": "2024-08-16T01:00:00"
   },
@@ -149,6 +165,7 @@
     "Description": "Electric standing desk with height adjustment and spacious work surface.",
     "Price": 399.99,
     "Category": "Furniture",
+    "Brand": "Hp",
     "Ratings": 4.6,
     "Product_Creation_Date": "2024-08-16T02:30:00"
   },
@@ -158,6 +175,7 @@
     "Description": "Ergonomic wireless mouse with adjustable DPI and rechargeable battery.",
     "Price": 39.99,
     "Category": "Accessories",
+    "Brand": "Samsung",
     "Ratings": 4.5,
     "Product_Creation_Date": "2024-08-16T03:15:00"
   },
@@ -166,7 +184,8 @@
     "Product_Image": "https://i.ibb.co/K67qznJ/Mechanical-Keyboard.jpg",
     "Description": "RGB mechanical keyboard with customizable key switches and backlight.",
     "Price": 129.99,
-    "Category": "Computers",
+    "Category": "Electronics",
+    "Brand": "Hp",
     "Ratings": 4.7,
     "Product_Creation_Date": "2024-08-16T04:45:00"
   },
@@ -176,6 +195,7 @@
     "Description": "Smart refrigerator with touch screen and Wi-Fi connectivity.",
     "Price": 2499.99,
     "Category": "Home Appliances",
+    "Brand": "Walton",
     "Ratings": 4.8,
     "Product_Creation_Date": "2024-08-16T06:00:00"
   },
@@ -185,6 +205,7 @@
     "Description": "Cordless vacuum cleaner with powerful suction and long-lasting battery.",
     "Price": 199.99,
     "Category": "Home Appliances",
+    "Brand": "Samsung",
     "Ratings": 4.6,
     "Product_Creation_Date": "2024-08-16T07:10:00"
   },
@@ -193,7 +214,8 @@
     "Product_Image": "https://i.ibb.co/6XC61XZ/LED-Desk-Lamp.jpg",
     "Description": "LED desk lamp with adjustable brightness and USB charging port.",
     "Price": 49.99,
-    "Category": "Lighting",
+    "Category": "Home Appliances",
+    "Brand": "Walton",
     "Ratings": 4.4,
     "Product_Creation_Date": "2024-08-16T08:20:00"
   },
@@ -203,6 +225,7 @@
     "Description": "Wireless noise-cancelling earbuds with up to 24 hours of playtime.",
     "Price": 199.99,
     "Category": "Electronics",
+    "Brand": "LG",
     "Ratings": 4.5,
     "Product_Creation_Date": "2024-08-16T09:30:00"
   },
@@ -211,7 +234,8 @@
     "Product_Image": "https://i.ibb.co/0B9c5F2/Fitness-Smart-Scale.jpg",
     "Description": "Smart scale with body composition analysis and Bluetooth connectivity.",
     "Price": 69.99,
-    "Category": "Health & Wellness",
+    "Category": "Accessories",
+    "Brand": "LG",
     "Ratings": 4.3,
     "Product_Creation_Date": "2024-08-16T10:50:00"
   },
@@ -220,7 +244,8 @@
     "Product_Image": "https://i.ibb.co/DD6V8yx/Smart-Thermostat.jpg",
     "Description": "Smart thermostat with Wi-Fi connectivity and energy-saving features.",
     "Price": 249.99,
-    "Category": "Home Automation",
+    "Category": "Home Appliances",
+    "Brand": "Walton",
     "Ratings": 4.7,
     "Product_Creation_Date": "2024-08-16T11:40:00"
   },
@@ -229,7 +254,8 @@
     "Product_Image": "https://i.ibb.co/T1tnpTj/Ultra-HD-Smart-TV.jpg",
     "Description": "Next-gen gaming console with 4K gaming and 1TB storage.",
     "Price": 499.99,
-    "Category": "Gaming",
+    "Category": "Accessories",
+    "Brand": "LG",
     "Ratings": 4.8,
     "Product_Creation_Date": "2024-08-16T12:55:00"
   },
@@ -239,6 +265,7 @@
     "Description": "4K streaming media player with voice remote and built-in apps.",
     "Price": 49.99,
     "Category": "Electronics",
+    "Brand": "Samsung",
     "Ratings": 4.6,
     "Product_Creation_Date": "2024-08-16T14:00:00"
   },
@@ -247,7 +274,8 @@
     "Product_Image": "https://i.ibb.co/y0M5S7x/Smart-Doorbell.jpg",
     "Description": "Smart doorbell with HD video, two-way talk, and motion detection.",
     "Price": 149.99,
-    "Category": "Home Security",
+    "Category": "Home Appliances",
+    "Brand": "LG",
     "Ratings": 4.4,
     "Product_Creation_Date": "2024-08-16T15:15:00"
   },
@@ -256,7 +284,8 @@
     "Product_Image": "https://i.ibb.co/SQx5JW6/Electric-Toothbrush.jpg",
     "Description": "Electric toothbrush with 5 brushing modes and 2-minute timer.",
     "Price": 79.99,
-    "Category": "Health & Wellness",
+    "Category": "Home Appliances",
+    "Brand": "Samsung",
     "Ratings": 4.7,
     "Product_Creation_Date": "2024-08-16T16:30:00"
   },
@@ -266,6 +295,7 @@
     "Description": "Durable laptop backpack with USB charging port and water-resistant material.",
     "Price": 59.99,
     "Category": "Accessories",
+    "Brand": "Samsung",
     "Ratings": 4.5,
     "Product_Creation_Date": "2024-08-16T17:45:00"
   },
@@ -275,6 +305,7 @@
     "Description": "10,000mAh portable power bank with fast charging and multiple ports.",
     "Price": 29.99,
     "Category": "Electronics",
+    "Brand": "LG",
     "Ratings": 4.6,
     "Product_Creation_Date": "2024-08-16T18:55:00"
   },
@@ -283,7 +314,8 @@
     "Product_Image": "https://i.ibb.co/wQGfGfx/4-K-Action-Camera.jpg",
     "Description": "1080p home security camera with night vision and two-way audio.",
     "Price": 89.99,
-    "Category": "Home Security",
+    "Category": "Cameras",
+    "Brand": "Hp",
     "Ratings": 4.4,
     "Product_Creation_Date": "2024-08-16T20:10:00"
   },
@@ -292,7 +324,8 @@
     "Product_Image": "https://i.ibb.co/YTpqVTW/Cordless-Drill.jpg",
     "Description": "20V cordless drill with 2-speed settings and LED light.",
     "Price": 99.99,
-    "Category": "Tools",
+    "Category": "Accessories",
+    "Brand": "Samsung",
     "Ratings": 4.7,
     "Product_Creation_Date": "2024-08-16T21:20:00"
   },
@@ -301,7 +334,8 @@
     "Product_Image": "https://i.ibb.co/1JbTm6w/Camping-Tent.jpg",
     "Description": "4-person camping tent with waterproof design and easy setup.",
     "Price": 149.99,
-    "Category": "Outdoor",
+    "Category": "Accessories",
+    "Brand": "Walton",
     "Ratings": 4.5,
     "Product_Creation_Date": "2024-08-16T22:30:00"
   },
@@ -310,7 +344,8 @@
     "Product_Image": "https://i.ibb.co/nQxhH0Z/Electric-Kettle.jpg",
     "Description": "Electric kettle with 1.7-liter capacity and fast boiling technology.",
     "Price": 39.99,
-    "Category": "Kitchen Appliances",
+    "Category": "Home Appliances",
+    "Brand": "LG",
     "Ratings": 4.6,
     "Product_Creation_Date": "2024-08-16T23:40:00"
   },
@@ -320,6 +355,7 @@
     "Description": "Drone with 4K camera, GPS, and 25-minute flight time.",
     "Price": 499.99,
     "Category": "Electronics",
+    "Brand": "Samsung",
     "Ratings": 4.8,
     "Product_Creation_Date": "2024-08-17T00:50:00"
   },
@@ -328,7 +364,8 @@
     "Product_Image": "https://i.ibb.co/GsL47px/Bluetooth-Smart-Light-Bulb.jpg",
     "Description": "Smart light bulb with Bluetooth control and 16 million color options.",
     "Price": 24.99,
-    "Category": "Lighting",
+    "Category": "Electronics",
+    "Brand": "LG",
     "Ratings": 4.5,
     "Product_Creation_Date": "2024-08-17T02:00:00"
   },
@@ -338,6 +375,7 @@
     "Description": "Portable projector with 1080p resolution and built-in speakers.",
     "Price": 299.99,
     "Category": "Electronics",
+    "Brand": "Walton",
     "Ratings": 4.6,
     "Product_Creation_Date": "2024-08-17T03:10:00"
   },
@@ -346,7 +384,8 @@
     "Product_Image": "https://i.ibb.co/nBmdmdB/Electric-Shaver.jpg",
     "Description": "Electric shaver with 5-blade system and wet/dry shaving capability.",
     "Price": 89.99,
-    "Category": "Health & Wellness",
+    "Category": "Home Appliances",
+    "Brand": "Hp",
     "Ratings": 4.7,
     "Product_Creation_Date": "2024-08-17T04:20:00"
   },
@@ -355,7 +394,8 @@
     "Product_Image": "https://i.ibb.co/YRw0TsC/Wireless-Mouse.jpg",
     "Description": "Wireless gaming mouse with 16000 DPI and RGB lighting.",
     "Price": 69.99,
-    "Category": "Computers",
+    "Category": "Electronics",
+    "Brand": "LG",
     "Ratings": 4.8,
     "Product_Creation_Date": "2024-08-17T05:30:00"
   },
@@ -365,6 +405,7 @@
     "Description": "Air purifier with HEPA filter and quiet operation for large rooms.",
     "Price": 199.99,
     "Category": "Home Appliances",
+    "Brand": "Samsung",
     "Ratings": 4.7,
     "Product_Creation_Date": "2024-08-17T06:40:00"
   }

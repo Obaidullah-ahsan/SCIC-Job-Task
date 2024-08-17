@@ -17,10 +17,25 @@ const Products = () => {
   const [sortOrder, setSortOrder] = useState("asc");
 
   useEffect(() => {
-    axios.get(`http://localhost:3000/products?search=${search}`).then((res) => {
-      setProducts(res.data);
-    });
-  }, [search]);
+    axios
+      .get(`http://localhost:3000/products`, {
+        params: {
+          page,
+          limit: 10, // Number of products per page
+          search,
+          brand,
+          category,
+          minPrice,
+          maxPrice,
+          // sortBy,
+          // sortOrder,
+        },
+      })
+      .then((res) => {
+        setProducts(res.data.products);
+        setTotalPages(res.data.totalPages);
+      });
+  }, [search, brand, category, maxPrice, minPrice, page, sortBy, sortOrder]);
   console.log(products);
 
   const handleSearch = (e) => {
@@ -53,20 +68,21 @@ const Products = () => {
             className="border p-2 rounded"
           >
             <option value="">All Brands</option>
-            <option value="Gucci">Gucci</option>
-            <option value="Ralph Lauren">Ralph Lauren</option>
-            <option value="Calvin Klein">Calvin Klein</option>
-            <option value="Hugo Boss">Hugo Boss</option>
+            <option value="LG">LG</option>
+            <option value="Hp">Hp</option>
+            <option value="Samsung">Samsung</option>
+            <option value="Walton">Walton</option>
           </select>
           <select
             onChange={(e) => setCategory(e.target.value)}
             className="border p-2 rounded"
           >
             <option value="">All Categories</option>
-            <option value="Shoe(s)">Shoe(s)</option>
-            <option value="Shirt">Shirt</option>
-            <option value="T-shirt">T-shirt</option>
-            <option value="Pant">Pant</option>
+            <option value="Electronics">Electronics</option>
+            <option value="Accessories">Accessories</option>
+            <option value="Cameras">Cameras</option>
+            <option value="Home Appliances">Home Appliances</option>
+            <option value="Furniture">Furniture</option>
           </select>
           <input
             type="number"
@@ -99,7 +115,23 @@ const Products = () => {
           <ProductCard key={product._id} product={product}></ProductCard>
         ))}
       </div>
-      
+      <div className="flex justify-center items-center my-5">
+        <button
+          onClick={() => setPage((prev) => Math.max(prev - 1, 1))}
+          disabled={page === 1}
+          className="bg-blue-600 text-white border px-3 py-1 mx-1 rounded"
+        >
+          Previous
+        </button>
+        <span className="px-3 py-1 mx-1">{`Page ${page} of ${totalPages}`}</span>
+        <button
+          onClick={() => setPage((prev) => Math.min(prev + 1, totalPages))}
+          disabled={page === totalPages}
+          className="border px-3 py-1 mx-1 rounded bg-blue-600 text-white"
+        >
+          Next
+        </button>
+      </div>
     </div>
   );
 };
