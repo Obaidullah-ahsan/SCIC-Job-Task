@@ -5,9 +5,16 @@ import ProductCard from "../../Components/ProductCard";
 
 const Products = () => {
   const [products, setProducts] = useState([]);
-  const [filter, setFilter] = useState("");
   const [search, setSearch] = useState("");
   const [searchText, setSearchText] = useState("");
+  const [page, setPage] = useState(1);
+  const [totalPages, setTotalPages] = useState(1);
+  const [brand, setBrand] = useState("");
+  const [category, setCategory] = useState("");
+  const [minPrice, setMinPrice] = useState("");
+  const [maxPrice, setMaxPrice] = useState("");
+  const [sortBy, setSortBy] = useState("");
+  const [sortOrder, setSortOrder] = useState("asc");
 
   useEffect(() => {
     axios.get(`http://localhost:3000/products?search=${search}`).then((res) => {
@@ -16,39 +23,20 @@ const Products = () => {
   }, [search]);
   console.log(products);
 
-  const options = [
-    { value: "Easy", label: "Easy" },
-    { value: "Medium", label: "Medium" },
-    { value: "Hard", label: "Hard" },
-  ];
-
   const handleSearch = (e) => {
     e.preventDefault();
     setSearch(searchText);
   };
   return (
-    <div className="mx-4 mb-6">
-      <div className="flex justify-evenly mt-10">
-        <div className="max-w-80 flex-1">
-          <select
-            defaultValue="DEFAULT"
-            onChange={(e) => setFilter(e.target.value)}
-            className="select min-h-11 h-11 mt-1 select-bordered w-full"
+    <div className="mx-8 mb-6">
+      <div className="flex justify-evenly mt-2">
+        <div className="flex md:flex-row flex-col gap-4 justify-center my-8">
+          <form
+            onSubmit={handleSearch}
+            className="flex p-1 overflow-hidden border rounded"
           >
-            <option value="DEFAULT" disabled>
-              Select Difficulty
-            </option>
-            {options.map((option) => (
-              <option key={option.value} value={option.value}>
-                {option.label}
-              </option>
-            ))}
-          </select>
-        </div>
-        <form onSubmit={handleSearch}>
-          <div className="flex p-1 overflow-hidden border rounded-lg    focus-within:ring focus-within:ring-opacity-40 focus-within:border-blue-400 focus-within:ring-blue-300">
             <input
-              className="px-6 py-2 text-gray-700 placeholder-gray-500 bg-white outline-none focus:placeholder-transparent"
+              className="px-2 text-gray-700 placeholder-gray-500 bg-white outline-none focus:placeholder-transparent"
               type="text"
               onChange={(e) => setSearchText(e.target.value)}
               value={searchText}
@@ -56,15 +44,62 @@ const Products = () => {
               placeholder="Enter Product Title"
             />
 
-            <button className="px-1 md:px-4 py-1 text-sm font-medium tracking-wider text-gray-100 uppercase transition-colors duration-300 transform bg-gray-700 rounded-md hover:bg-gray-600 focus:bg-gray-600 focus:outline-none">
+            <button className="px-1 md:px-4 py-1 text-sm font-medium tracking-wider text-gray-100 uppercase transition-colors duration-300 transform bg-gray-700">
               Search
             </button>
-          </div>
-        </form>
+          </form>
+          <select
+            onChange={(e) => setBrand(e.target.value)}
+            className="border p-2 rounded"
+          >
+            <option value="">All Brands</option>
+            <option value="Gucci">Gucci</option>
+            <option value="Ralph Lauren">Ralph Lauren</option>
+            <option value="Calvin Klein">Calvin Klein</option>
+            <option value="Hugo Boss">Hugo Boss</option>
+          </select>
+          <select
+            onChange={(e) => setCategory(e.target.value)}
+            className="border p-2 rounded"
+          >
+            <option value="">All Categories</option>
+            <option value="Shoe(s)">Shoe(s)</option>
+            <option value="Shirt">Shirt</option>
+            <option value="T-shirt">T-shirt</option>
+            <option value="Pant">Pant</option>
+          </select>
+          <input
+            type="number"
+            placeholder="Min Price"
+            value={minPrice}
+            onChange={(e) => setMinPrice(e.target.value)}
+            className="border p-2 rounded md:w-40 w-full"
+          />
+          <input
+            type="number"
+            placeholder="Max Price"
+            value={maxPrice}
+            onChange={(e) => setMaxPrice(e.target.value)}
+            className="border p-2 rounded md:w-40 w-full"
+          />
+
+          {/* Sort By Dropdown */}
+          <select
+            onChange={(e) => setSortBy(e.target.value)}
+            className="border p-2 rounded"
+          >
+            <option value="">Sort By</option>
+            <option value="price">Price</option>
+            <option value="creationDate">Date</option> {/* Updated Label */}
+          </select>
+        </div>
       </div>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 mt-8 gap-2">
-        {products.map((product) => <ProductCard key={product._id} product={product}></ProductCard>)}
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+        {products.map((product) => (
+          <ProductCard key={product._id} product={product}></ProductCard>
+        ))}
       </div>
+      
     </div>
   );
 };
