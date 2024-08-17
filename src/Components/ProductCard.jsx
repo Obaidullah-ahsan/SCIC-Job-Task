@@ -1,5 +1,7 @@
+import moment from "moment";
+
 const ProductCard = ({ product }) => {
-  const { Product_Name, Product_Image, Description, Price, Ratings , Category, Brand} = product;
+  const { Product_Name, Product_Image, Description, Price, Ratings , Category, Brand, Product_Creation_Date} = product;
   return (
     <div>
       <div className="border overflow-hidden bg-base-200 dark:bg-gray-800">
@@ -9,7 +11,7 @@ const ProductCard = ({ product }) => {
           alt="Assignment image"
         />
 
-        <div className="p-4 border-b h-48">
+        <div className="p-4 border-b h-56">
           <div>
             <div className="flex justify-between">
               <p className="text-sm font-semibold flex rounded-lg justify-center items-center text-black min-h-8 h-8 max-w-[85px] w-[85px] bg-[#77f09b] dark:text-blue-400">
@@ -22,8 +24,9 @@ const ProductCard = ({ product }) => {
             <h2 className="block mt-2 text-xl font-semibold transition-colors duration-300 transform dark:text-white hover:text-[#5FCF80]">
               {Product_Name}
             </h2>
+            <p className="text-sm">Brand : {Brand}</p>
             <p className="text-sm text-gray-500">{Category}</p>
-            <p className="text-sm text-gray-500">{Brand}</p>
+            <p className="text-sm text-gray-500">{moment(Product_Creation_Date).format('MMMM Do YYYY, h:mm:ss a')}</p>
             <p className="mt-2 text-sm dark:text-gray-400">{Description}</p>
           </div>
         </div>

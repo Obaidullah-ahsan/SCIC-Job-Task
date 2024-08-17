@@ -45,7 +45,7 @@ const Products = () => {
   return (
     <div className="mx-8 mb-6">
       <div className="flex justify-evenly mt-2">
-        <div className="flex md:flex-row flex-col gap-4 justify-center my-8">
+        <div className="flex flex-col lg:flex-row gap-4 justify-center my-8">
           <form
             onSubmit={handleSearch}
             className="flex p-1 overflow-hidden border rounded"
@@ -89,14 +89,14 @@ const Products = () => {
             placeholder="Min Price"
             value={minPrice}
             onChange={(e) => setMinPrice(e.target.value)}
-            className="border p-2 rounded md:w-40 w-full"
+            className="border p-2 rounded lg:w-32 w-full"
           />
           <input
             type="number"
             placeholder="Max Price"
             value={maxPrice}
             onChange={(e) => setMaxPrice(e.target.value)}
-            className="border p-2 rounded md:w-40 w-full"
+            className="border p-2 rounded lg:w-32 w-full"
           />
 
           {/* Sort By Dropdown */}
@@ -105,16 +105,44 @@ const Products = () => {
             className="border p-2 rounded"
           >
             <option value="">Sort By</option>
-            <option value="price">Price</option>
-            <option value="creationDate">Date</option> {/* Updated Label */}
+            <option value="Price">Price</option>
+            <option value="Product_Creation_Date">Date</option>{" "}
+            {/* Updated Label */}
+          </select>
+          <select
+            onChange={(e) => {
+              const value = e.target.value;
+              if (value === "price-asc") {
+                setSortBy("Price");
+                setSortOrder("asc");
+              } else if (value === "price-desc") {
+                setSortBy("Price");
+                setSortOrder("desc");
+              } else if (value === "date-desc") {
+                setSortBy("Product_Creation_Date");
+                setSortOrder("desc");
+              }
+            }}
+            className="border p-2 rounded"
+          >
+            <option value="">Sort By</option>
+            <option value="price-asc">Price (Low to High)</option>
+            <option value="price-desc">Price (High to Low)</option>
+            <option value="date-desc">Date (Newest)</option>
           </select>
         </div>
       </div>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
-        {products.map((product) => (
-          <ProductCard key={product._id} product={product}></ProductCard>
-        ))}
-      </div>
+      {products.length > 0 ? (
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+          {products.map((product) => (
+            <ProductCard key={product._id} product={product}></ProductCard>
+          ))}
+        </div>
+      ) : (
+        <div className="h-60 w-full">
+          <h2 className="flex items-center justify-center">No Data Found</h2>
+        </div>
+      )}
       <div className="flex justify-center items-center my-5">
         <button
           onClick={() => setPage((prev) => Math.max(prev - 1, 1))}
