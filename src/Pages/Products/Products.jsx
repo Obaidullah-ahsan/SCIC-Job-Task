@@ -27,8 +27,8 @@ const Products = () => {
           category,
           minPrice,
           maxPrice,
-          // sortBy,
-          // sortOrder,
+          sortBy,
+          sortOrder,
         },
       })
       .then((res) => {
